@@ -25,7 +25,7 @@
 (function(){
   try{
     var saved = localStorage.getItem('rd-theme');
-    var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+    var theme = saved || 'dark';
     if (theme === 'light') document.documentElement.setAttribute('data-theme', 'light');
   } catch(e){}
 })();
