@@ -1,0 +1,32 @@
+{
+  "name": "radhakrishna-digital",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "postbuild": "node scripts/fix-export-segments.mjs",
+    "start": "npx serve out",
+    "typecheck": "tsc --noEmit",
+    "images": "node scripts/optimize-images.mjs",
+    "deploy": "npm run build && npx wrangler pages deploy out --project-name radhakrishna-digital"
+  },
+  "dependencies": {
+    "next": "16.4.6",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.5",
+    "@types/node": "^22",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "^19",
+    "sharp": "0.35.5",
+    "tailwindcss": "4.3.5",
+    "typescript": "~5.9.3"
+  },
+  "engines": {
+    "node": ">=20.9"
+  }
+}
